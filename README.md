@@ -13,5 +13,5 @@ The Homepage
 
 ![alt text](https://raw.github.com/DonaldDerek/EyeEm-ReFilter/master/public/images/preview/2.png "Pick a Photo")
 
-Pick a photo to re-filter page
+Pick a photo to re-filter it
 
