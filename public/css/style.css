@@ -1,0 +1,43 @@
+body{
+	background: #34495e;
+}
+.step1{
+	position: absolute;
+	left: 50%;
+	margin-left: -212px;
+	top: 30%;
+	text-align: center;
+}
+.eyeemLogo{
+	margin-bottom: 10px;
+}
+ul.results{
+	margin: 103px 0 10px 73px;
+}
+.reWrapper{
+	margin-left: 30px;
+}
+.results img{
+	border: 6px solid #ffffff;
+	float: left;
+	margin: 0 15px 20px 0;
+	width: 134px;
+	height: 134px;
+}
+.results img:hover{
+	-ms-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+.loadMoreRe{
+	margin-bottom: 100px;
+}
+.loadMoreButton{
+	position: absolute;
+	left: 50%;
+	margin-left: -185px;
+	width: 350px;
+	display: none;
+}
