@@ -33,6 +33,15 @@ function render() {
 
 $(document).ready(function(){
 	
+	//Check for Webkit
+	$.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase()); 
+	$.browser.safari = /safari/.test(navigator.userAgent.toLowerCase()); 
+	
+	if(!$.browser.chrome && !$.browser.safari){
+	  alert('Only Works on Webkit (Google Chrome, Safari');
+	}
+	
+	//Config Modal 
 	$('#photoModal').modal({
 			backdrop: true,
 			keyboard: true,
