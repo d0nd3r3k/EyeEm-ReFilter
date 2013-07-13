@@ -1,7 +1,7 @@
 EyeEm-ReFilter
 ==============
 
-Using CSS3 Filters to Re-Filter public photos on EyeEm.
+Using CSS3 Filters to Re-Filter public photos on EyeEm. [Demo](http://donaldderek.com/eyeem-refilter/)
 
 ### TODO:
 + Make Photo downloadable using [html2canvas](https://github.com/niklasvh/html2canvas)
