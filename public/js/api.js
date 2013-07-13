@@ -2,7 +2,7 @@ var eyeem = {
  
  "url": "https://www.eyeem.com/api/v2/",
  
- "get": function( path, params_object, callback ){
+ get: function( path, params_object, callback ){
  
   if ( ! path ){
    return false;
@@ -38,7 +38,7 @@ var eyeem = {
   });
  },
  
- "post": function( path, params_object, callback ){
+ post: function( path, params_object, callback ){
  
   if ( ! path ){
    return false;

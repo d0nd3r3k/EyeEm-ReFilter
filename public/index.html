@@ -25,10 +25,9 @@ ___  ____ _  _ ____ _    ___     ___  ____ ____ ____ _  _
 
 
 <body>
-    <style type="text/css">
-          
-      </style>
-      <span class="loading hide"></span>
+    
+    <span class="loading hide"></span>
+    
     <div class="step1">
         <img class="eyeemLogo" src="images/devtour/eyeem-logo.png"/>
         <div class="control-group huge">
@@ -40,12 +39,10 @@ ___  ____ _  _ ____ _    ___     ___  ____ ____ ____ _  _
           </div>
         </div>
     </div>
-<div class="navbar navbar navbar-fixed-top step2 hide">
-  <div class="navbar-inner">
-    <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-
-      </button>
+    
+    <div class="navbar navbar navbar-fixed-top step2 hide">
+      <div class="navbar-inner">
+    <div class="container">      
       <a class="brand" href="#">EyeEm</a>
       <div class="nav-collapse collapse">
         <form id="searchForm" class="navbar-search form-search pull-right">
@@ -65,37 +62,94 @@ ___  ____ _  _ ____ _    ___     ___  ____ ____ ____ _  _
     <div class="reWrapper">
         <ul class="results"></ul>
     </div>
+    <div class="clearfix"></div>
     <div class="span4 loadMoreRe">
-    <a href="#" id="loadMore" class="btn btn-huge btn-primary btn-block loadMoreButton">
-      Load More
-      <span class="caret"></span>
-    </a>
+    <a href="#" id="loadMore" class="btn btn-huge btn-primary btn-block loadMoreButton">Load More<span class="caret"></span></a>
     </div>
 </div>
+
+<!-- Photo Modal -->
+<div id="photoModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="myModalLabel">Create Trippy Images</h4>
+  </div>
+  <div class="modal-body">
+    <div class="filter-wrapper">
+        <img id="pic" src="">
+        <output class="hide">-webkit-filter: none;</output>
+        <ul class="filters">
+          <li>
+            <span>blur</span>
+            <input type="range"  onchange="set('blur', this.value + 'px');" value="0" step="1" min="0" max="10">
+          </li>
+          <li>
+            <span>grayscale</span>
+            <input type="range" onchange="set('grayscale', this.valueAsNumber);" value="0" step="0.1" min="0" max="1">
+          </li>
+
+          <li>
+            <span>drop-shadow</span>
+            <input type="range" onchange="set('drop-shadow', this.value + 'px ' + this.value + 'px 20px black');" value="0" step="1" min="0" max="100">
+          </li>
+
+          <li>
+            <span>sepia</span>
+            <input type="range" onchange="set('sepia', this.valueAsNumber);" value="0" step="0.1" min="0" max="1">
+          </li>
+
+          <li>
+            <span>brightness</span>
+            <input type="range" onchange="set('brightness', this.valueAsNumber);" value="0" step="0.1" min="0" max="10">
+          </li>
+
+          <li>
+            <span>contrast</span>
+            <input type="range" onchange="set('contrast', this.valueAsNumber);" value="0" step="0.1" min="0" max="10">
+          </li>
+
+          <li>
+            <span>hue-rotate</span>
+            <input type="range" onchange="set('hue-rotate', this.value + 'deg');" value="0" step="30" min="0" max="360">
+          </li>
+          <li>
+            <span>invert</span>
+            <input type="range" onchange="set('invert', this.valueAsNumber);" value="0" step="0.1" min="0" max="1">
+          </li>
+          <li>
+            <span>saturate</span>
+            <input type="range" onchange="set('saturate', this.valueAsNumber);" value="0" step="0.1" min="0" max="10">
+          </li>
+          <li>
+            <span>opacity</span>
+            <input type="range" onchange="set('opacity', this.valueAsNumber);" value="0" step="0.1" min="0" max="1">
+          </li>
+          
+
+    </div>
+    <div class="image-filters">
+
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" onclick="reset()">reset</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary disabled">Download Image</button>
+  </div>
+</div>
+
+
 <!-- Load JS here for greater good =============================-->
 <script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="js/jquery.ui.touch-punch.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-select.js"></script>
-<script src="js/bootstrap-switch.js"></script>
-<script src="js/flatui-checkbox.js"></script>
-<script src="js/flatui-radio.js"></script>
-<script src="js/jquery.tagsinput.js"></script>
 <script src="js/jquery.placeholder.js"></script>
-<script src="js/jquery.stacktable.js"></script>
 <script src="js/mustache.js"></script>
 <script src="js/api.js"></script>
 <script src="js/eyeem.js"></script>
 
-<script>
-    
-
-</script>
-
 <!--My Scripts -->
 <script id="resultTpl" type="text/template">
-    <img src="{{thumb}}" class="img-rounded" />
+    <a class="imgWrapper"><img src="{{thumb}}" class="img-rounded" /></a>
 </script>
 </body>
 </html>	

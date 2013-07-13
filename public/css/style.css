@@ -41,3 +41,95 @@ ul.results{
 	width: 350px;
 	display: none;
 }
+article {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+}
+article > section {
+  margin: 1em 0;
+}
+.cols {
+  -webkit-columns: 3;
+  width: 80%;
+}
+.cols > span {
+  display: inline-block;
+  width: 100%;
+}
+.cols > span > span {
+  width: 35%;
+  display: inline-block;
+  white-space: nowrap;
+}
+.cols > span > span:after {
+  content: '():';
+}
+hgroup {
+  text-align: center;
+  margin-bottom: 1em;
+}
+output {
+  display: block;
+  font-size: 14pt;
+  font-weight: 600;
+}
+@-webkit-keyframes sepia-anim {
+  from { -webkit-filter: sepia(0); }
+  to   { -webkit-filter: sepia(1); }
+}
+@-webkit-keyframes grayscale-anim {
+  from { -webkit-filter: grayscale(0); }
+  to   { -webkit-filter: grayscale(1); }
+}
+@-webkit-keyframes blur-anim {
+  from { -webkit-filter: blur(0); }
+  to   { -webkit-filter: blur(10px); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotateZ(0deg); }
+  to   { -webkit-transform: rotateZ(360deg); }
+}
+.sepia {
+  -webkit-animation: sepia-anim 2s ease-in-out;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+}
+.grayscale {
+  -webkit-animation: grayscale-anim 2s ease-in-out;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+}
+.blur {
+  -webkit-animation: blur-anim 0.5s linear;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+}
+.spin {
+  -webkit-animation: spin 10s linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+#pic {
+  border-radius: 6px;
+  float: left;
+  width: 200px;
+  margin: 32px 64px;
+}
+input[type="range"] {
+	display: block;
+	margin: 15px 0 0 0;
+	width: 300px;
+}
+.clearfix{
+	clear:both;
+}
+ul.filters{
+	float: left;
+	width: 670px;
+	list-style: none;
+}
+ul.filters li{
+	display: inline-block;
+	margin-right: 30px;
+}
