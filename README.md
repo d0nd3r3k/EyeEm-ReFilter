@@ -1,4 +1,4 @@
-[![Stories in Ready](http://badge.waffle.io/DonaldDerek/EyeEm-ReFilter.png)](http://waffle.io/DonaldDerek/EyeEm-ReFilter)  
+[![Stories in Ready](https://badge.waffle.io/DonaldDerek/EyeEm-ReFilter.png)](http://waffle.io/DonaldDerek/EyeEm-ReFilter)  
 EyeEm-ReFilter
 ==============
 
